@@ -11,7 +11,7 @@ public class EventListener implements Listener {
     @EventHandler
     public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
 
-        if(event.getPlayer().isOp() && !AdminSnitcher.getConfiguration().getIgnoredCommands().contains(event.getMessage().split(" ")[0].replace("/",""))){
+        if(event.getPlayer().hasPermission("adminsnitcher.command") && !AdminSnitcher.getConfiguration().getIgnoredCommands().contains(event.getMessage().split(" ")[0].replace("/",""))){
            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', AdminSnitcher.getConfiguration().getChatMessage().replace("%player%", event.getPlayer().getName())
                    .replace("%command%", event.getMessage())));
         }
