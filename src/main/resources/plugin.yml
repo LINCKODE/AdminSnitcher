@@ -1,0 +1,14 @@
+name: AdminSnitcher
+version: ${project.version}
+main: me.linckode.adminsnitcher.AdminSnitcher
+api-version: 1.16
+prefix: AdminSnitcher
+load: STARTUP
+authors: [ LINCKODE ]
+description: Simple Minecraft plugin that prints in the chat the commands that OP users use.
+commands:
+  adminsnitcher:
+    aliases:
+      - as
+    permission: adminsnitcher.command
+    description: Admin Snitcher's main command.
